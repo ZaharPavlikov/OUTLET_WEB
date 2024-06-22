@@ -1,0 +1,12 @@
+.favorite{
+    border-radius: 40px;
+}
+
+.heart{
+    border: none;
+    border-radius: 20px;
+}
+
+.header{
+    background-color: black;
+}
