@@ -1,10 +1,25 @@
-.favorite{
-    border-radius: 40px;
+.countainer{
+    
 }
 
-.heart{
+.favorite{
+    border-radius: 5px;
     border: none;
-    border-radius: 20px;
+}
+
+.full_menu{
+    border-radius: 5px;
+    border: none;
+}
+
+.tovars{
+    border-radius: 5px;
+    border: none;
+}
+
+.reg_logo{
+    border-radius: 5px;
+    border: none;
 }
 
 .header{
