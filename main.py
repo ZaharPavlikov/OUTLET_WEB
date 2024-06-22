@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
 
-app = FastAPI()
+app = FastAPI(hbvjsvbvdj)
 
 templates = Jinja2Templates(directory="templates")
 
