@@ -26,6 +26,35 @@
         </div>
     </nav>
 </header>
-<body>    
-</body>
+<body>  
+    <form class="search-wrapper">
+        <input class="search" type="text">    <!-- строка поиска класс = search-->
+        <button class="search-submit" type="submit"> <!-- кнопка подтверждения поиска с картинкой класс = search-submit-->
+            <a href="/" class="search_pic"><img style="width:30px;height:30px;" src="static/lupa.png" alt="notifications"></a><!-- класс самой картирки поиска = search_pic-->
+        </button>
+    </form>
+    <div class = "container_filt">
+        <div class = "black">
+            <input class = "black_button" type="checkbox" id="black" name="source" value="black">
+            <label class = "black_lable" for="black">Черный</label>                                 
+        </div>
+        <!-- контейнер фильтра с названием и подтверждением -->
+        <div class = "white">
+            <input class = "white_button" type="checkbox" id="white" name="source" value="white">
+            <label class = "white_lable" for="white">Белый</label>
+        </div>
+        <div class = "blue">
+            <input  class = "blue_button" type="checkbox" id="blue" name="source" value=""blue">
+            <label  class = "blue_lable" for="blue">Синий</label>
+        </div>
+        <div class = "red">
+            <input class = "red_button" type="checkbox" id="red" name="source" value="red">
+            <label class = "red_lable" for="red">Красный</label>
+        </div>
+        <div class = "green">
+            <input class = "green_button" type="checkbox" id="green" name="source" value="green">
+            <label class = "green_lable" for="green">Зеленый</label>
+        </div>
+    </div>  
+    </body>
 </html>
