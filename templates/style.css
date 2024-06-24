@@ -1,27 +1,45 @@
-.countainer{
-    
+.container{
+    right: px;
+    background-color: rgb(196, 216, 98);
+    display: flex; /* Делаем элемент флекс-контейнером */
 }
 
-.favorite{
+.logo {
+    background: none;
+    border: none; 
+    transform: scale(1.8);
+    position: absolute;
+    top: 13px;
+    left: 80px;
+}
+
+.favorite{ 
     border-radius: 5px;
-    border: none;
+    background: none;
+    border: none; /* Убираем рамку */
+    transform: scale(0.8);
+}
+
+.heart {
 }
 
 .full_menu{
     border-radius: 5px;
-    border: none;
+    background: none;
+    border: none; /* Убираем рамку */
+    transform: scale(0.87);
 }
 
 .tovars{
     border-radius: 5px;
     border: none;
+    background: none;
+    transform: scale(1.28);
 }
 
 .reg_logo{
     border-radius: 5px;
-    border: none;
-}
-
-.header{
-    background-color: black;
+    background: none;
+    border: none; /* Убираем рамку */
+    transform: scale(0.9);
 }
