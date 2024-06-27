@@ -27,6 +27,34 @@
                 <button class = "reg_logo h_button">
                     <a href="/" class="reg_pic"><img style="width:30px;height:30px;" src="static/reg_pic.png" alt="notifications"></a>
                 </button>
+                <dialog id="regDialog">
+                    <form action="action_page.php">
+                      <div class="vcenter back">
+                        <button type="button" onclick="window.regDialog.close()" style="width: 40px;height: 40px;margin-left: 350px;border-color: transparent;background-color: transparent;">
+                          <a href="#"> <img style="width:45px;height:45px;" class="krest" src="static/krest.png"> </a>
+                        </button>
+                        <h1 style="font-size: 30px;">Регистрация</h1>
+                        <hr>            
+                        <!-- <label for="email"><b>Email</b></label> -->
+                        <input type="text" id="regisInput" placeholder="Email или номер телефона" name="email" required>
+                        <!-- <label for="psw"><b>Пароль</b></label> -->
+                        <input type="password" id="regisInput" placeholder="Пароль" name="psw" required>
+                        <!-- <label for="psw-repeat"><b>Подтвердите пароль</b></label> -->
+                        <input type="password" id="regisInput" placeholder="Подтвердите пароль" name="psw-repeat" required>
+                        <hr>
+                        <!-- <p>Создавая аккаунт вы соглашаетесь с  <a href="#">условиями конфиденциальности</a>.</p> -->              
+                        <button type="submit" class="registerbtn">Зарегистрироваться</button>
+                        <div class="container signin">
+                          <style>
+                            a {
+                            text-decoration: none; /* Убираем подчёркивание */
+                            }
+                          </style>
+                          <p style="margin-left: auto;margin-right: auto;">Уже зарегистрированы? <a href="#">Войти</a></p>
+                        </div>
+                      </div>
+                    </form>
+                  </dialog>
             </div>
         </div>
     </nav>
@@ -39,6 +67,31 @@
         </button>
     </form>
     <div class = "container_filt">
+        <div class="wrapper">
+            <header>
+              <h2>Price Range Filter</h2>
+              <p>Use slider or enter min and max price</p>
+            </header>
+            <div class="price-input">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="input-min" value="2500">
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input type="number" class="input-max" value="7500">
+              </div>
+            </div>
+            <div class="slider">
+              <div class="progress"></div>
+            </div>
+            <div class="range-input">
+              <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+              <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+            </div>
+          </div>
+          <script src="static/script.js"></script>
         <div class = "black">
             <input class = "black_button" type="checkbox" id="black" name="source" value="black">
             <label class = "black_lable" for="black">Черный</label>                                 
