@@ -10,3 +10,7 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/")
 async def read_api(request: Request):
     return templates.TemplateResponse("index.html",{"request": request}) 
+
+@app.post("/search_product")
+async def search_product(product_name = Form()):
+    return {"Name of product = ": product_name}

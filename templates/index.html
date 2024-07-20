@@ -60,8 +60,8 @@
     </nav>
 </header>
 <body>  
-    <form class="search-wrapper">
-        <input class="search" type="text">    <!-- строка поиска класс = search-->
+    <form class="search-wrapper" action="search_product" method="post">
+        <input class="search" type="text" name="product_name">    <!-- строка поиска класс = search-->
         <button class="search-submit" type="submit"> <!-- кнопка подтверждения поиска с картинкой класс = search-submit-->
             <a href="/" class="search_pic"><img style="width:30px;height:30px;" src="static/lupa.png" alt="notifications"></a><!-- класс самой картирки поиска = search_pic-->
         </button>
