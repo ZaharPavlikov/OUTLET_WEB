@@ -39,3 +39,18 @@ rangeInput.forEach(input =>{
         }
     });
 });
+
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+// Close the modal when the user clicks anywhere outside of the modal
+window.onclick = function(event) {
+    if (event.target == document.getElementById("modal")) {
+        closeModal();
+    }
+}

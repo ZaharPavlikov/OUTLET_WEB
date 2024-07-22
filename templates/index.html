@@ -24,42 +24,44 @@
                 <button class = "tovars tovars_button">
                     <a href="/" class="bag"><img style="width:30px;height:30px;" src="static/bag.png" alt="notifications"></a>
                 </button>
-                <button class = "reg_logo h_button">
-                    <a href="/" class="reg_pic"><img style="width:30px;height:30px;" src="static/reg_pic.png" alt="notifications"></a>
-                </button>
-                <dialog id="regDialog">
-                    <form action="action_page.php">
-                      <div class="vcenter back">
-                        <button type="button" onclick="window.regDialog.close()" style="width: 40px;height: 40px;margin-left: 350px;border-color: transparent;background-color: transparent;">
-                          <a href="#"> <img style="width:45px;height:45px;" class="krest" src="static/krest.png"> </a>
-                        </button>
-                        <h1 style="font-size: 30px;">Регистрация</h1>
-                        <hr>            
-                        <!-- <label for="email"><b>Email</b></label> -->
-                        <input type="text" id="regisInput" placeholder="Email или номер телефона" name="email" required>
-                        <!-- <label for="psw"><b>Пароль</b></label> -->
-                        <input type="password" id="regisInput" placeholder="Пароль" name="psw" required>
-                        <!-- <label for="psw-repeat"><b>Подтвердите пароль</b></label> -->
-                        <input type="password" id="regisInput" placeholder="Подтвердите пароль" name="psw-repeat" required>
-                        <hr>
-                        <!-- <p>Создавая аккаунт вы соглашаетесь с  <a href="#">условиями конфиденциальности</a>.</p> -->              
-                        <button type="submit" class="registerbtn">Зарегистрироваться</button>
-                        <div class="container signin">
-                          <style>
-                            a {
-                            text-decoration: none; /* Убираем подчёркивание */
-                            }
-                          </style>
-                          <p style="margin-left: auto;margin-right: auto;">Уже зарегистрированы? <a href="#">Войти</a></p>
-                        </div>
-                      </div>
-                    </form>
-                  </dialog>
+                <button class="reg_logo h_button" onclick="openModal()">
+                  <img style="width:30px;height:30px;" src="static/reg_pic.png" alt="notifications">
+              </button>
             </div>
         </div>
     </nav>
 </header>
-<body>  
+<body>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Вход</h2><br>
+        <form id="login-form">
+            <label for="username">Имя пользователя:</label><br><br>
+            <input class="usernamepassword" type="text" id="username" name="username" required><br><br>
+            <label for="password">Пароль:</label><br><br>
+            <input class="usernamepassword" type="password" id="password" name="password" required><br><br>
+            <button class="enter" type="submit">Войти</button>
+        </form>
+    </div>
+</div>
+
+<!-- <div id="registerModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeRegisterModal()">&times;</span>
+      <h2>Регистрация</h2>
+      <form id="register-form">
+          <label for="regUsername">Имя пользователя:</label>
+          <input type="text" id="regUsername" name="regUsername" required>
+          <label for="regEmail">Электронная почта:</label>
+          <input type="email" id="regEmail" name="regEmail" required>
+          <label for="regPassword">Пароль:</label>
+          <input type="password" id="regPassword" name="regPassword" required>
+          <button type="submit">Зарегистрироваться</button>
+      </form>
+  </div>
+</div> -->
+
     <form class="search-wrapper">
         <input class="search" type="text">    <!-- строка поиска класс = search-->
         <button class="search-submit" type="submit"> <!-- кнопка подтверждения поиска с картинкой класс = search-submit-->
