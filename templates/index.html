@@ -32,6 +32,19 @@
     </nav>
 </header>
 <body>  
+  <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Вход</h2><br>
+          <form id="login-form">
+              <label for="username">Имя пользователя:</label><br><br>
+              <input class="usernamepassword" type="text" id="username" name="username" required><br><br>
+              <label for="password">Пароль:</label><br><br>
+              <input class="usernamepassword" type="password" id="password" name="password" required><br><br>
+              <button class="enter" type="submit">Войти</button>
+          </form>
+      </div>
+  </div>
     <form class="search-wrapper">
         <input class="search" type="text">    <!-- строка поиска класс = search-->
         <button class="search-submit" type="submit"> <!-- кнопка подтверждения поиска с картинкой класс = search-submit-->
