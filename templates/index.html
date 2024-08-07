@@ -11,7 +11,6 @@
 </head>
 <header>
     <nav class="navigation">
-        <!-- штука, где лого, корзина и тд -->
         <div class="container">
             <button class = "full_menu h_button">
                 <a href="/" class="lines"><img style="width:30px;height:30px;" src="static/menu.png" alt="notifications"></a>
@@ -33,45 +32,25 @@
     </nav>
 </header>
 <body>  
-  <!-- модалочка под ВОЙТИ -->
   <div id="modal" class="modal">
       <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <h2>Вход</h2><br>
-          <form id="login-form">
+          <form id="login-form" action="auth" method="get"> 
               <label for="username">Имя пользователя:</label><br><br>
               <input class="usernamepassword" type="text" id="username" name="username" required><br><br>
               <label for="password">Пароль:</label><br><br>
               <input class="usernamepassword" type="password" id="password" name="password" required><br><br>
-              <button class="enter" type="submit">Войти</button><br><br>
-              <p>Еще нет аккаунта? <a href="#" onclick="openRegistrationModal()">Зарегистрироваться</a></p>
+              <button class="enter" type="submit">Войти</button>
           </form>
       </div>
   </div>
-  <!-- модалочка под ЗАРЕГЕСТРИРОВАТЬСЯ -->
-  <div id="registration-modal" class="modal">
-    <div class="modal-content-registration">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Регистрация</h2><br>
-        <form id="registration-form">
-            <label for="reg-username">Имя пользователя:</label><br><br>
-            <input class="usernamepassword" type="text" id="reg-username" name="reg-username" required><br><br>
-            <label for="reg-password">Пароль:</label><br><br>
-            <input class="usernamepassword" type="password" id="reg-password" name="reg-password" required><br><br>
-            <label for="email">Электронная почта:</label><br><br>
-            <input class="usernamepassword" type="email" id="email" name="email" required><br><br>
-            <button class="enter" type="submit">Зарегистрироваться</button><br><br>
-        </form>
-    </div>
-</div>
-    <!-- Строка поиска -->
     <form class="search-wrapper" action="search_product" method="post">
         <input class="search" type="text" name="product_name">    <!-- строка поиска класс = search-->
         <button class="search-submit" type="submit"> <!-- кнопка подтверждения поиска с картинкой класс = search-submit-->
             <a href="/" class="search_pic"><img style="width:30px;height:30px;" src="static/lupa.png" alt="notifications"></a><!-- класс самой картирки поиска = search_pic-->
         </button>
     </form>
-    <!-- Штука с ползунком для диапозона цен -->
     <div class = "container_filt">
         <div class="wrapper">
             <header>
@@ -120,7 +99,6 @@
             <label class = "green_lable" for="green">Зеленый</label>
         </div>
     </div>  
-    <!-- секция с самим продуктом -->
     <div class="product-section">
         <div class="product-border">
           <div class="product-img-center">

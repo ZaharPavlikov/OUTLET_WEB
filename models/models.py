@@ -1,4 +1,4 @@
-from sqlalchemy import MetaData, Table, Column, Integer, String, TIMESTAMP, ForeignKey, JSON, Boolean
+from sqlalchemy import MetaData, Table, Column, Integer, String, ForeignKey,  Boolean
 
 metadata = MetaData()
 
@@ -6,13 +6,14 @@ user = Table(
     "user",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("email", String, nullable=False),
-    Column("name", String, nullable=False),
-    Column("hashed_password", String, nullable=False),
+    Column("username", String),
+    Column("hashed_password", String),
+    Column("email", String),
     Column("is_active", Boolean, default=True, nullable=False),
     Column("is_superuser", Boolean, default=False, nullable=False),
     Column("is_verified", Boolean, default=False, nullable=False),
 )
+
 
 color = Table(
     "color",

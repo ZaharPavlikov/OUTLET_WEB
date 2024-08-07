@@ -40,26 +40,17 @@ rangeInput.forEach(input =>{
     });
 });
 
-
 function openModal() {
     document.getElementById("modal").style.display = "block";
 }
 
 function closeModal() {
     document.getElementById("modal").style.display = "none";
-    document.getElementById("registration-modal").style.display = "none";
 }
 
-function openRegistrationModal() {
-    document.getElementById("modal").style.display = "none";
-    document.getElementById("registration-modal").style.display = "block";
-}
-
+// Close the modal when the user clicks anywhere outside of the modal
 window.onclick = function(event) {
-    const modal = document.getElementById("modal");
-    const registrationModal = document.getElementById("registration-modal");
-    if (event.target == modal || event.target == registrationModal) {
-        modal.style.display = "none";
-        registrationModal.style.display = "none";
+    if (event.target == document.getElementById("modal")) {
+        closeModal();
     }
 }

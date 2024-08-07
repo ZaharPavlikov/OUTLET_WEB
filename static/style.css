@@ -95,20 +95,6 @@
     text-align: center;
 }
 
-.modal-content-registration {
-    background-color: #e7e2ea;
-    margin: 5% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-    min-width: 400px;
-    max-width: 600px;
-    height: 50%;
-    min-height: 430px;
-    border-radius: 20px;
-    text-align: center;
-}
-
 .close {
     color: #aaa;
     float: right;
@@ -137,9 +123,8 @@
     top: 25px;
     border: 1px solid #888888;
     border-radius: 20px;
-    height: 30px; 
-    min-width: 90px;
-    display: inline-block;
+    width: 90px;
+    height: 30px;
 }
 
 /* buttons: heart, tovars, logo  */

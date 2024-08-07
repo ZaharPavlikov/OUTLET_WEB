@@ -1,22 +1,13 @@
-from datetime import datetime
-from enum import Enum
-from typing import List, Optional, Union
-
-from fastapi_users import fastapi_users, FastAPIUsers
-from pydantic import BaseModel, Field
-
 from fastapi import FastAPI, HTTPException, Depends, Request,Form,status
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
 from auth.auth import auth_backend
 from auth.database import User
 from auth.manager import get_user_manager
 from auth.schemas import UserRead, UserCreate
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-from fastapi.middleware.cors import CORSMiddleware
 
+from fastapi_users import fastapi_users, FastAPIUsers
 
 
 app = FastAPI()
@@ -37,10 +28,12 @@ app.include_router(
     prefix="/auth",
     tags=["auth"],
 )
-# Маршрутизация для статики
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
+current_user = fastapi_users.current_user()
 
 templates = Jinja2Templates(directory="templates")
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 async def read_api(request: Request):
@@ -49,5 +42,3 @@ async def read_api(request: Request):
 @app.post("/search_product")
 async def search_product(product_name = Form()):
     return {"Name of product = ": product_name}
-
-
